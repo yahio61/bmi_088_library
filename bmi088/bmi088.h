@@ -207,6 +207,7 @@ typedef struct bmi088_struct
 	bmi088_flag_t 		flags;
 	bmi088_conf_t 		device_config;
 	bmi088_datas_t		datas;
+	void (*IMU_callback)(struct bmi088_struct*);
 }bmi088_struct_t;
 
 uint8_t bmi088_init(bmi088_struct_t* BMI);

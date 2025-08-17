@@ -303,6 +303,10 @@ void bmi088_update(bmi088_struct_t* BMI)
 				BMI->datas.gyro_y_angle += (BMI->datas.gyro_y) * BMI->datas.delta_time;
 				BMI->datas.gyro_z_angle += (BMI->datas.gyro_z) * BMI->datas.delta_time;
 
+				if(BMI->IMU_callback != NULL)
+				{
+					BMI->IMU_callback(BMI);
+				}
 				//update_quaternion(q, BMI->gyro_x, BMI->gyro_y, BMI->gyro_z, BMI->deltaTime);
 				//calculateQuaternion(q, BMI->gyro_x, BMI->gyro_y, BMI->gyro_z, BMI->deltaTime, vector);
 
