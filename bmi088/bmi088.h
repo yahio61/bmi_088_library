@@ -13,8 +13,6 @@
 #include <string.h>
 
 
-extern float roll, pitch, yaw;
-
 //Offset Values
 #ifdef ROCKET_CARD
 #define ACCEL_Z_OFFSET 			(float)4.0
